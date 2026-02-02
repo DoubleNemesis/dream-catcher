@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Catcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌙 DreamCatcher</h1>
+            <p class="subtitle">Record your dreams and discover their meanings</p>
+        </header>
+
+        <section class="add-dream">
+            <h2>Add a New Dream</h2>
+            <form id="dreamForm">
+                <textarea 
+                    id="dreamText" 
+                    placeholder="Describe your dream in detail..."
+                    rows="6"
+                    required
+                ></textarea>
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Get Interpretation</span>
+                    <span class="btn-loading" style="display: none;">Interpreting...</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="dreams-list">
+            <h2>Your Dream Journal</h2>
+            <div id="dreamsContainer">
+                <p class="loading">Loading dreams...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
