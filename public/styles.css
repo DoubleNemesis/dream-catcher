@@ -27,7 +27,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: "Roboto", sans-serif;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
@@ -44,6 +44,15 @@ header {
     text-align: center;
     color: white;
     margin-bottom: 40px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 30%;
 }
 
 header h1 {
@@ -63,7 +72,7 @@ header h1 {
 
 .add-dream, .dreams-list {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -109,6 +118,7 @@ textarea:focus {
 }
 
 button {
+    font-family: inherit;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
@@ -155,7 +165,7 @@ button:disabled {
 
 .dream-card {
     border: none;
-    border-radius: 10px;
+    border-radius: 1px;
     padding: 20px;
     margin-bottom: 20px;
     transition: all 0.3s ease;
@@ -337,7 +347,7 @@ button:disabled {
     .add-dream, .dreams-list {
         padding: 20px;
         margin-bottom: 20px;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     h2 {
@@ -426,6 +436,11 @@ button:disabled {
         gap: .5em;
         text-align: center;
     }
+}
+
+footer {
+    text-align: center;
+    color: white;
 }
 
 @media (max-width: 480px) {
