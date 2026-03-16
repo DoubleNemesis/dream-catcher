@@ -32,6 +32,15 @@ app.get('/health', async (_req, res) => {
 }
 });
 
+app.get('/shutdown', (req, res) => {
+  console.log('=== MANUAL SHUTDOWN TRIGGERED ===');
+  res.send('Shutting down...');
+  
+  setTimeout(() => {
+    process.kill(process.pid, 'SIGTERM');
+  }, 100);
+});
+
 
 // API Routes
 app.use('/api/dreams', dreamsRouter);
