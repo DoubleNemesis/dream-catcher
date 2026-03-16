@@ -49,6 +49,7 @@ initDatabase().then(() => {
 });
 
 process.on('SIGTERM', gracefulShutdown);
+console.log('✓ SIGTERM handler registered'); 
 
 async function gracefulShutdown() {
   console.log('SIGTERM received, shutting down gracefully');
