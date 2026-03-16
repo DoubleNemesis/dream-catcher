@@ -44,3 +44,17 @@ initDatabase().then(() => {
 }).catch(error => {
   console.error('Failed to initialize database:', error);
 });
+
+process.on('SIGTERM', closeDB);
+
+async function closeDB () {
+ console.log('SIGTERM received, closing database pool');
+ try {
+   await pool.end(); // closes the DB
+   console.log('Database pool closed');
+   process.exit(0);
+ } catch (error) {
+   console.error('Error closing database pool:', error);
+   process.exit(1);
+ }
+}
